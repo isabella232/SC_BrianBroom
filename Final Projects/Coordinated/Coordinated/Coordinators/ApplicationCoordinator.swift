@@ -45,14 +45,14 @@ class ApplicationCoordinator {
 extension ApplicationCoordinator: Coordinator {
   
   func start() {
-    let loginCoord = LoginCoordinator(navigationController: navigationController)
-    childCoordinators.append(loginCoord)
-    loginCoord.delegate = self
+    let loginCoordinator = LoginCoordinator(navigationController: navigationController)
+    childCoordinators.append(loginCoordinator)
+    loginCoordinator.delegate = self
     
     let loggedIn = UserDefaults.standard.bool(forKey: "isLoggedIn")
     
     if !loggedIn {
-      loginCoord.start()
+      loginCoordinator.start()
     } else {
       showContent()
     }
@@ -62,12 +62,12 @@ extension ApplicationCoordinator: Coordinator {
 
 extension ApplicationCoordinator: ArticleCoordinatorDelegate {
   
-  func logout() {
+  func logOut() {
     UserDefaults.standard.set(false, forKey: "isLoggedIn")
     
     _ = childCoordinators.popLast()
-    let loginCoord = childCoordinators.last
-    loginCoord?.start()
+    let loginCoordinator = childCoordinators.last
+    loginCoordinator?.start()
   }
   
 }
@@ -75,10 +75,10 @@ extension ApplicationCoordinator: ArticleCoordinatorDelegate {
 extension ApplicationCoordinator: LoginCoordinatorDelegate {
   
   func showContent() {
-    let articleCoord = ArticleCoordinator(navigationController: navigationController)
-    articleCoord.delegate = self
-    childCoordinators.append(articleCoord)
-    articleCoord.start()
+    let articleCoordinator = ArticleCoordinator(navigationController: navigationController)
+    articleCoordinator.delegate = self
+    childCoordinators.append(articleCoordinator)
+    articleCoordinator.start()
   }
   
 }

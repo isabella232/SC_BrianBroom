@@ -47,8 +47,8 @@ class LoginCoordinator {
 
 extension LoginCoordinator: Coordinator {
   func start() {
-    let sb = UIStoryboard(name: "Login", bundle: nil)
-    let loginVC = sb.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+    let storyboard = UIStoryboard(name: "Login", bundle: nil)
+    let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
     loginVC.delegate = self
     navigationController.setViewControllers([loginVC], animated: false)
   }
@@ -56,16 +56,16 @@ extension LoginCoordinator: Coordinator {
 
 extension LoginCoordinator: LoginViewControllerDelegate {
   
-  func didLogin() {
+  func didLogIn() {
     UserDefaults.standard.set(true, forKey: "isLoggedIn")
     
     delegate?.showContent()
   }
   
-  func signupNewAccount() {
+  func signUpNewAccount() {
     user = User()
-    let sb = UIStoryboard(name: "Login", bundle: nil)
-    let usernameVC = sb.instantiateViewController(withIdentifier: "SignupUsernameViewController") as! SignupUsernameViewController
+    let storyboard = UIStoryboard(name: "Login", bundle: nil)
+    let usernameVC = storyboard.instantiateViewController(withIdentifier: "SignupUsernameViewController") as! SignupUsernameViewController
     usernameVC.delegate = self
     navigationController.pushViewController(usernameVC, animated: true)
   }
@@ -77,8 +77,8 @@ extension LoginCoordinator: SignupUsernameViewControllerDelegate {
   func set(username: String) {
     user?.username = username
     
-    let sb = UIStoryboard(name: "Login", bundle: nil)
-    let passwordVC = sb.instantiateViewController(withIdentifier: "SignupPasswordViewController") as! SignupPasswordViewController
+    let storyboard = UIStoryboard(name: "Login", bundle: nil)
+    let passwordVC = storyboard.instantiateViewController(withIdentifier: "SignupPasswordViewController") as! SignupPasswordViewController
     passwordVC.delegate = self
     navigationController.pushViewController(passwordVC, animated: true)
   }
@@ -90,8 +90,8 @@ extension LoginCoordinator: SignupPasswordViewControllerDelegate {
   func set(password: String) {
     user?.password = password
     
-    let sb = UIStoryboard(name: "Login", bundle: nil)
-    let regionVC = sb.instantiateViewController(withIdentifier: "SignupRegionViewController") as! SignupRegionViewController
+    let storyboard = UIStoryboard(name: "Login", bundle: nil)
+    let regionVC = storyboard.instantiateViewController(withIdentifier: "SignupRegionViewController") as! SignupRegionViewController
     regionVC.delegate = self
     navigationController.pushViewController(regionVC, animated: true)
   }

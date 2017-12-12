@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
   var appCoordinator: ApplicationCoordinator?
   
-  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+  func applicationDidFinishLaunching(_: UIApplication) {
     window = UIWindow()
     let nav = UINavigationController()
     
@@ -43,11 +43,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     appCoordinator = ApplicationCoordinator(navigationController: nav)
     appCoordinator?.start()
-    
-    return true
   }
-  
-  
-  
 }
-

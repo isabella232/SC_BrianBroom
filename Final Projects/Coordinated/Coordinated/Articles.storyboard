@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -50,9 +50,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Articles" id="BI2-cr-5c1">
-                        <barButtonItem key="leftBarButtonItem" title="Logout" id="jNt-6I-Rxv">
+                        <barButtonItem key="leftBarButtonItem" title="Log out" id="jNt-6I-Rxv" userLabel="Log out">
                             <connections>
-                                <action selector="didTapLogoutButton:" destination="7I9-DF-Er9" id="nl3-m5-szP"/>
+                                <action selector="didTapLogOutButton:" destination="7I9-DF-Er9" id="nl3-m5-szP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
