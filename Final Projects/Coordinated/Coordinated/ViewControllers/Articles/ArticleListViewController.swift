@@ -30,7 +30,7 @@ import UIKit
 
 protocol ArticleListViewControllerDelegate: class {
   func didSelect(article: Article)
-  func logout()
+  func logOut()
 }
 
 class ArticleListViewController: UITableViewController {
@@ -47,11 +47,10 @@ class ArticleListViewController: UITableViewController {
       article.summary = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc bibendum odio vitae mi ornare, quis tincidunt ligula ullamcorper. Cras purus."
       articles.append(article)
     }
-    
   }
   
-  @IBAction func didTapLogoutButton(_ sender: Any) {
-    delegate?.logout()
+  @IBAction func didTapLogOutButton(_ sender: Any) {
+    delegate?.logOut()
   }
   
   //MARK: - UITableViewDataSource

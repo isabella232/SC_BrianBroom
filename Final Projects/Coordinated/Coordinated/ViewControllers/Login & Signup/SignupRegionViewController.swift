@@ -39,7 +39,7 @@ class SignupRegionViewController: UIViewController, UIPickerViewDataSource, UIPi
   
   var regions = ["North America", "South America", "Europe", "Asia", "Africa", "Australia"]
   
-  @IBAction func didTapSignupButton(_ sender: Any) {
+  @IBAction func didTapSignUpButton(_ sender: Any) {
     delegate?.set(region: regions[regionPicker.selectedRow(inComponent: 0)])
   }
   
@@ -57,7 +57,7 @@ class SignupRegionViewController: UIViewController, UIPickerViewDataSource, UIPi
   
   func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
     let title = NSAttributedString(string: regions[row],
-                                   attributes: [NSAttributedStringKey.foregroundColor : UIColor.white])
+                                   attributes: [.foregroundColor: UIColor.white])
     return title
   }
   

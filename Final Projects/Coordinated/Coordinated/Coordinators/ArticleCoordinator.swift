@@ -29,7 +29,7 @@
 import UIKit
 
 protocol ArticleCoordinatorDelegate: class {
-  func logout()
+  func logOut()
 }
 
 class ArticleCoordinator {
@@ -46,8 +46,8 @@ class ArticleCoordinator {
 extension ArticleCoordinator: Coordinator {
   
   func start() {
-    let sb = UIStoryboard(name: "Articles", bundle: nil)
-    let listVC = sb.instantiateViewController(withIdentifier: "ArticleListViewController") as! ArticleListViewController
+    let storyboard = UIStoryboard(name: "Articles", bundle: nil)
+    let listVC = storyboard.instantiateViewController(withIdentifier: "ArticleListViewController") as! ArticleListViewController
     listVC.delegate = self
     navigationController.setViewControllers([listVC], animated: true)
   }
@@ -56,17 +56,16 @@ extension ArticleCoordinator: Coordinator {
 
 extension ArticleCoordinator: ArticleListViewControllerDelegate {
   
-  func logout() {
-    delegate?.logout()
+  func logOut() {
+    delegate?.logOut()
   }
   
   func didSelect(article: Article) {
-    let sb = UIStoryboard(name: "Articles", bundle: nil)
-    let detailVC = sb.instantiateViewController(withIdentifier: "ArticleDetailViewController") as! ArticleDetailViewController
+    let storyboard = UIStoryboard(name: "Articles", bundle: nil)
+    let detailVC = storyboard.instantiateViewController(withIdentifier: "ArticleDetailViewController") as! ArticleDetailViewController
     detailVC.delegate = self
     detailVC.selectedArticle = article
     navigationController.pushViewController(detailVC, animated: true)
-    
   }
   
 }

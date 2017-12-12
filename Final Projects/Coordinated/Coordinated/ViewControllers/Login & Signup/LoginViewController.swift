@@ -29,8 +29,8 @@
 import UIKit
 
 protocol LoginViewControllerDelegate: class {
-  func didLogin()
-  func signupNewAccount()
+  func didLogIn()
+  func signUpNewAccount()
 }
 
 class LoginViewController: UIViewController {
@@ -41,7 +41,7 @@ class LoginViewController: UIViewController {
   @IBOutlet var usernameField: UITextField!
   @IBOutlet var spinner: UIActivityIndicatorView!
   
-  @IBAction func loginButtonTapped(_ sender: Any) {
+  @IBAction func logInButtonTapped(_ sender: Any) {
     
     guard usernameField.hasText, passwordField.hasText else {
       return
@@ -50,11 +50,11 @@ class LoginViewController: UIViewController {
     spinner.startAnimating()
     DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
       self.spinner.stopAnimating()
-      self.delegate?.didLogin()
+      self.delegate?.didLogIn()
     }
   }
   
   @IBAction func signupButtonTapped(_ sender: Any) {
-    self.delegate?.signupNewAccount()
+    self.delegate?.signUpNewAccount()
   }
 }
