@@ -1,5 +1,7 @@
 # Screencast Metadata
 
+[TODO Brian: Please fill in all the metadata in this section.]
+
 ## Screencast Title
 
 [TODO. Example: What’s New in Foundation: Parsing JSON in Swift 4]
@@ -17,6 +19,8 @@
 # Child Coordinators
 
 ### Introduction -- Talking Head
+
+[TODO Brian: Refactor this script to make this screencast independent from the last one - see my comments in Trello.]
 
 Hey everyone, this is Brian. In the last video I showed you how to use a Coordinator class to drive the presentation of screens in your iOS app. Today I'll show you how to use multiple coordinators. As your app gets bigger you may have a section of screnes that it makes sense to break off into its own part. My suggestion is that when you make a seperate storyboard for on section, that you also make a seperate coordinator to handle that section of the app.
 
@@ -247,14 +251,12 @@ And thats it. You can build and run the app and go through the new user screens.
 
 ## Conclusion
 
-At this point you know how to implement Coordinators in your apps, including how to break out specific parts into a coordinator to specificly handle that section of the app. I think its a big improvement over using segues and `prepareFor(segue:)` to setup application flow and pass values around. If you're up for a challenge, here are two additional things you can implement.
+At this point you know how to implement Coordinators in your apps, including how to break out specific parts into a coordinator to specificly handle that section of the app. 
 
-### Challenge 1 - what region is the user in?
+To review... [TODO Brian: Briefly review the steps here]
 
-Your app may need to know what part of the world the user is in. Maybe for language settings, or to pick a server closer to them. Using the coorinator setup you can use the screen included in the login storyboard to set this value. You can add it to any part of the login flow, I'd suggest having that be the first screen in the new user flow. If you have trouble, check out the code in the finished project.
+I think its a big improvement over using segues and `prepareFor(segue:)` to setup application flow and pass values around. 
 
-### Challenge 2 - Child Coordinator for articles
-
-There are only two screens here in the app, but you can split those off into an ArticleCoordinator to take responsibility for those transitions. See if you can implement this change, and again, check the finished project if you need a hint.
+[Brian - again I deleted the challenges as they're not for screencasts]
 
 Hopefully this will make your transitions less clumsy, and your whole app more (ahem) coordinated.

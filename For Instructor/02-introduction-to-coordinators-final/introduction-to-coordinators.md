@@ -1,5 +1,7 @@
 # Screencast Metadata
 
+[TODO Brian: Please fill in all the metadata in this section.]
+
 ## Screencast Title
 
 [TODO. Example: What’s New in Foundation: Parsing JSON in Swift 4]
@@ -230,8 +232,12 @@ Now you can run the app, (show) login, and select an article (show) -- all handl
 
 ### Conclusion -- Talking Head
 
-Ok, thats how to use a Coordinator to manage your screen transitions. Its a bit of work to setup, but once you're done, all the logic for your screen transitions is in one place. This makes the View Controllers more independent, and easier to reuse or move around. At some point there will be too many transitions for one class, and it makes sense to break them into smaller classes that manage one section of your app flow. I'll show you how to set that up in the next video.
+Ok, thats how to use a Coordinator to manage your screen transitions. 
 
-## Chalenges -- Talking Head?
+To review, [TODO Brian: briefly review the main steps to create/use a Coordinator.]
 
-Can you implement the logout button on the article list screen? Give it a shot, and if you need a hint, check the implementation in the sample files. You can do it!
+Its a bit of work to setup, but once you're done, all the logic for your screen transitions is in one place. This makes the View Controllers more independent, and easier to reuse or move around. At some point there will be too many transitions for one class, and it makes sense to break them into smaller classes that manage one section of your app flow. I'll show you how to set that up in my next screencast.
+
+[TODO Brian: Joke here]
+
+[Brian - I deleted the challenge, those are usually meant for courses, not screencasts.]
